@@ -17,6 +17,7 @@ case class ReduceWithRedisFunctionState() extends AggregateFunction[(String,Stri
     * 如果，只在方法内对对象进行调用，  会出问题  ！！！！  数据新增异常，或set跨窗口现象
     */
   var pv:Long=0
+
   var UVACC:mutable.Set[String]=_
   var projectcode:String=""
   var hour:String=""
